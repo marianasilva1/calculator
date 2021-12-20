@@ -17,6 +17,7 @@
 }
 .calculator__title{}
 .calculator__screen{
+     overflow: hidden;
     font-size: 1.25rem;
     display: flex;
     flex-direction: column;
@@ -53,6 +54,7 @@
     border: none;
     cursor: pointer;
     background-color: var(--color-gray);
+    color:#FFFFFF;
    
     
 }
