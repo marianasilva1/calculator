@@ -1,27 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 :root{
     --color-red :       #BB2020;
-    --color-yellow:     #FFEB4D;
+    --color-oper:       #ff802b;
     --color-black:      #121317;
-    --color-dark-blue:  #06111C;
     --color-gray:       #BEC7C7;
+    --color--white:     #f3f3f3;
 
 
 }
-.calculator{
-   font-family: 'Roboto', sans-serif;
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html{
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
    font-size: 1.25rem;
+   color: var(--color-black);
+   background-color: var(--color--white);
+}
+.calculator{
     max-width: 400px;
     margin: 0 auto;
     padding: 0 20px;
 }
-.calculator__title{}
+.calculator__title{
+  color: var(--color-oper);
+}
 .calculator__screen{
-     overflow: hidden;
-    font-size: 1.25rem;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    border: 1px solid  var(--color-black);
     align-items: flex-end;
     width: 100%;
     margin-bottom: 20px;
@@ -49,21 +60,26 @@
     align-items: center;
     border-radius: 50%;
     height: 80px;
-    width: 80px; 
+    width: 80px;
     font-size: 1.25rem;
     border: none;
     cursor: pointer;
-    background-color: var(--color-gray);
-    color:#FFFFFF;
+    background: #f5f5fa;
+    box-shadow: -10px -10px 30px 0 #fff,10px 10px 30px 0 #1d0dca17;
+    color: var(--color-black);
+    transition: .2s;
+    
    
     
 }
 .calculator__btn:hover{
-    box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 10px;
-    opacity: 0.8;
+  background: #f8f8ff;
+  box-shadow: -15px -15px 30px 0 #fff, 15px 15px 30px 0 #1d0dca17;
+
 }
 .calculator__btn:not([data-num]){
- background-color: var(--color-yellow);
+  color: var(--color-oper);
+  box-shadow: -10px -10px 30px 0 #fff,10px 10px 30px 0 #1d0dca17;
 }
 [data-equal='=']{
     width: 100%;
@@ -78,7 +94,7 @@
     width: 100%;
     animation: zoom 1s;
     text-align: center;
-    font-size: 30px;
+    font-size: 1.875rem;
 }
 @keyframes zoom {
     0% { 
