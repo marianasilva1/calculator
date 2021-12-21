@@ -11,6 +11,7 @@ let calculator = '';
 document.querySelector("[data-clear]").addEventListener('click', onClearClick);
 document.querySelector("[data-reset]").addEventListener('click', onResetClick);
 document.querySelector("[data-equal]").addEventListener('click', onEqualClick);
+document.querySelector(".error__reset").addEventListener('click', onErrorClick);
 window.addEventListener('error', function() {
     resultDisplay.innerHTML = '';
     currDisplay.innerHTML='';
@@ -64,7 +65,7 @@ function onEqualClick(){
         }else{
             resultDisplay.innerHTML ='= '+ eval(calculator); 
         } 
-        if (total.includes('Infinity')){
+        if (total.includes('Infinity')||total.includes('NaN')){
             document.querySelector('.calculator').classList.add('broken');
             document.querySelector('.error').classList.add('error-show');
         }
@@ -84,4 +85,7 @@ function onClearClick(){
         resultDisplay.innerHTML = '';
     }
     
+}
+function onErrorClick(){
+    window.location.reload();
 }
