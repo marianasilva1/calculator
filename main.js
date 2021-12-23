@@ -55,16 +55,9 @@ function onEqualClick(){
             calculator = calculator.slice(0,-1);
         }
         const total = eval(calculator).toString();
-        if (total.includes('.')){
-            if(eval(calculator).toFixed(2)[eval(calculator).toFixed(2).length-1]=='0'){
-                resultDisplay.innerHTML ='= '+ eval(calculator).toFixed(1);
-            }else{
-              resultDisplay.innerHTML ='= '+ eval(calculator).toFixed(2);  
-            }
-            
-        }else{
-            resultDisplay.innerHTML ='= '+ eval(calculator); 
-        } 
+        
+        resultDisplay.innerHTML ='= '+ eval(calculator); 
+        
         if (total.includes('Infinity')||total.includes('NaN')){
             document.querySelector('.calculator').classList.add('broken');
             document.querySelector('.error').classList.add('error-show');
