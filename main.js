@@ -82,3 +82,19 @@ function onClearClick(){
 function onErrorClick(){
     window.location.reload();
 }
+
+
+
+/**DARK/LIGHT MODE */
+
+document.querySelector('#mode').addEventListener('change', onModeChange);
+const mode__emoji = document.querySelector('.mode__emoji');
+
+function onModeChange(){
+    document.querySelector('html').toggleAttribute('dark-theme');
+    if (document.querySelector('html').getAttribute('dark-theme') == '') {
+        mode__emoji.innerHTML = "light_mode";
+      } else {
+        mode__emoji.innerHTML = "dark_mode";
+      }
+}
