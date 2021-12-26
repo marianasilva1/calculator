@@ -19,6 +19,8 @@ html {
   font-size: 1.25rem;
   color: var(--color-black);
   background-color: var(--color--white);
+  -webkit-tap-highlight-color: transparent;
+  touch-action: none;
 }
 .container {
   width: 400px;
