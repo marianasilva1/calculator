@@ -104,7 +104,7 @@ html {
   background-color: inherit;
   transition: 0.2s;
 }
-.calculator__btn:hover {
+.calculator__btn:hover,.calculator__btn:active {
   box-shadow: var(--box-shadow-hover)
 }
 .calculator__btn:not([data-num]) {
