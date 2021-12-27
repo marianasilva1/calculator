@@ -105,7 +105,7 @@ html {
   transition: 0.2s;
 }
 .calculator__btn:hover,.calculator__btn:active {
-  box-shadow: var(--box-shadow-hover)
+  box-shadow: var(--box-shadow-hover);
 }
 .calculator__btn:not([data-num]) {
   color: var(--operator-color);
